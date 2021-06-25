@@ -1,6 +1,8 @@
 from turtle import Turtle, Screen
 import turtle
 import random
+import colorgram
+
 
 
 # Practice not only turtle but class and class inheritance
@@ -57,16 +59,21 @@ class MyTurtle(Turtle):
             turtleHeadingAngle = self.setheading(random.choice(direction))
             self.forward(length)
 
-    def spiroGraph(self, angle=10):
+    def spiroGraph(self, rotatingAngle=10, circleRadius=100, turtleSpeed="fastest"):
         currentAngle=0
         while True:
-            self.speed("fastest")
+            self.speed(turtleSpeed)
             self.setheading(currentAngle)
             self.RandomColor()
-            self.circle(100)
-            currentAngle += angle
-            if currentAngle%360==0:
+            self.circle(circleRadius)
+            currentAngle += rotatingAngle
+            if currentAngle%360<=3:
                 break
+
+    def HirstPainting(self, size=300, colorNumber=6, imagePath = 'C:\Development\python\\100Days_Python\day18_turtle\hirst_picture.jpg'):     
+        colorExtracted = colorgram.extract(imagePath, colorNumber)
+        for i in colorExtracted:
+            print(i.rgb)
         
             
 
@@ -85,7 +92,10 @@ tim = MyTurtle()
 #tim.RandomWalk()
 
 #Challenge 5: Draw a Spirograph
-tim.spiroGraph(13)
+#tim.spiroGraph(13)
+
+#Challenge 6: Hirst painting
+tim.HirstPainting()
 
 screen = Screen()
 screen.exitonclick()
