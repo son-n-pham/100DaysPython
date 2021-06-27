@@ -1,3 +1,8 @@
+"""
+This is for classes of Snake class made of its BodyPart
+BodyPart is a class inheritting Turtle class
+"""
+
 from turtle import Turtle
 import time
 
