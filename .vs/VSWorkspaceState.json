@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\day17_coffee_maker",
-    "\\day18_turtle"
+    "\\day18_turtle",
+    "\\day18_turtle\\exe",
+    "\\day18_turtle\\py_completed",
+    "\\day19_20_snake_game"
   ],
-  "SelectedNode": "\\day18_turtle\\hirst_picture.jpg",
+  "SelectedNode": "\\day19_20_snake_game\\snake.py",
   "PreviewInSolutionExplorer": false
 }
