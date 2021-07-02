@@ -11,7 +11,7 @@ class Distance_Converter:
     def Execute(self):
         window = tkinter.Tk()
         window.title("Converter from Miles to Km")
-        window.minsize(width=200, height=200)
+        window.minsize(width=200, height=50)
 
         entry = tkinter.Entry(width = 10)
         entry.config(justify='center')
