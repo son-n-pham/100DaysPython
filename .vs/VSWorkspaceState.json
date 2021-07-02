@@ -5,8 +5,9 @@
     "\\day18_turtle",
     "\\day18_turtle\\exe",
     "\\day18_turtle\\py_completed",
-    "\\day19_20_snake_game"
+    "\\day19_20_snake_game",
+    "\\day27_tkinter_distance-converter"
   ],
-  "SelectedNode": "\\day19_20_snake_game\\snake.py",
+  "SelectedNode": "\\day19_20_snake_game\\bodypart.py",
   "PreviewInSolutionExplorer": false
 }
