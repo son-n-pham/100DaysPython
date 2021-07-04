@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\day17_coffee_maker",
-    "\\day17_coffee_maker\\exe",
-    "\\day18_turtle"
+    "\\day18_turtle",
+    "\\day27_tkinter_distance-converter"
   ],
-  "SelectedNode": "\\day18_turtle\\py_completed",
+  "SelectedNode": "\\day27_tkinter_distance-converter\\py_completed",
   "PreviewInSolutionExplorer": false
 }

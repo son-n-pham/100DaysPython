@@ -79,7 +79,6 @@ class MyTurtle(Turtle):
         
         turtle.colormode(255)
 
-
         self.speed("fastest")
         def localRotate(i):
             if i%2==0:
@@ -93,8 +92,6 @@ class MyTurtle(Turtle):
             self.penup()
             self.forward(dotSpace)
 
-
-
         self.penup()
         self.setpos(-size/2, size/2)
         self.pendown()
@@ -105,7 +102,23 @@ class MyTurtle(Turtle):
             localRotate(i)
             dotLine()
             localRotate(i)
-        
+
+    def keyDraw(self):
+        def TurtleForward():
+            self.forward(10)
+        def TurtleBackward():
+            self.backward(10)
+        def TurtleGoRight():
+            self.right(10)
+            TurtleForward()
+        def TurtleGoLeft():
+            self.left(10)
+            TurtleForward()
+        turtle.listen()
+        turtle.onkey(TurtleForward,"d")
+        turtle.onkey(TurtleBackward,"a")
+        turtle.onkey(TurtleGoRight,"s")
+        turtle.onkey(TurtleGoLeft,"w")
             
 tim = MyTurtle()
 
@@ -125,7 +138,10 @@ tim = MyTurtle()
 #tim.spiroGraph(13)
 
 #Challenge 6: Hirst painting
-tim.HirstPainting(size=500)
+#tim.HirstPainting(size=500)
+
+#Challnge 1 of Day 18: Turtle reacts to key press
+tim.keyDraw()
 
 screen = Screen()
 screen.exitonclick()
