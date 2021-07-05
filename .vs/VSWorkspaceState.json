@@ -3,8 +3,14 @@
     "",
     "\\day17_coffee_maker",
     "\\day18_turtle",
-    "\\day27_tkinter_distance-converter"
+    "\\day19_20_snake_game",
+    "\\day27_tkinter_distance-converter",
+    "\\day27_tkinter_distance-converter\\py_completed",
+    "\\day28_pomodoro",
+    "\\day28_pomodoro\\py_completed",
+    "\\day28_pomodoro\\py_completed\\audio",
+    "\\day28_pomodoro\\py_completed\\img"
   ],
-  "SelectedNode": "\\day27_tkinter_distance-converter\\py_completed",
+  "SelectedNode": "\\day28_pomodoro\\py_completed\\audio\\piano.mp3",
   "PreviewInSolutionExplorer": false
 }
