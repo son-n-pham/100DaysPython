@@ -8,8 +8,15 @@
     "\\day27_tkinter_distance-converter\\py_completed",
     "\\day28_pomodoro",
     "\\day28_pomodoro\\exe",
+<<<<<<< HEAD
     "\\day28_pomodoro\\py_completed"
   ],
   "SelectedNode": "\\day28_pomodoro\\py_completed",
+=======
+    "\\day28_pomodoro\\py_completed",
+    "\\day28_pomodoro\\py_completed\\audio"
+  ],
+  "SelectedNode": "\\day28_pomodoro\\py_completed\\setup.py",
+>>>>>>> pomodoro
   "PreviewInSolutionExplorer": false
 }
