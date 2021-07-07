@@ -1,0 +1,2 @@
+@py ./ pomodoro.py %*
+@pause

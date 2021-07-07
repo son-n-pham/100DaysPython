@@ -1,15 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\day17_coffee_maker",
     "\\day18_turtle",
     "\\day18_turtle\\exe",
     "\\day18_turtle\\py_completed",
     "\\day19_20_snake_game",
     "\\day27_tkinter_distance-converter",
     "\\day27_tkinter_distance-converter\\exe",
-    "\\day27_tkinter_distance-converter\\py_completed"
+    "\\day27_tkinter_distance-converter\\py_completed",
+    "\\day28_pomodoro",
+    "\\day28_pomodoro\\py_completed"
   ],
-  "SelectedNode": "\\day27_tkinter_distance-converter\\exe",
+  "SelectedNode": "\\day28_pomodoro\\py_completed\\pomodoro.py",
   "PreviewInSolutionExplorer": false
 }
