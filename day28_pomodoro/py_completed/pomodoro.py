@@ -28,6 +28,7 @@ def playMusic(fileName):
     except:
         pass
 
+
 class Pomodoro:
     def __init__(self):
         self.reps = 1
