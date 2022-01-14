@@ -21,6 +21,14 @@ def searchFile(fileName):
     pathname = os.path.dirname(sys.argv[0])      
     return glob(pathname + "/**/" + fileName, recursive=True)[0]
 
+def playMusic(fileName):
+    try:
+        mixer.music.load(searchFile(fileName))
+        mixer.music.play()
+    except:
+        pass
+
+
 class Pomodoro:
     def __init__(self):
         self.reps = 1
@@ -109,15 +117,13 @@ class Pomodoro:
 
             # Set countDownTime for long break time
             elif self.reps % 8 == 0:
-                mixer.music.load(searchFile("Comptine d'un autre été l'après.mp3"))
-                mixer.music.play()
+                playMusic("Comptine d'un autre été l'après.mp3")
                 countDownTime = inputTime(longBreakPeriodEntry) * 60
                 timerLabel.configure(text="Long Break", fg=RED)
 
             # Set countDownTime for short break time
             else:
-                mixer.music.load(searchFile("Comptine d'un autre été l'après.mp3"))
-                mixer.music.play()
+                playMusic("Comptine d'un autre été l'après.mp3")
                 countDownTime = inputTime(shortBreakPeriodEntry) * 60
                 timerLabel.configure(text="Short Break", fg=PINK)
             

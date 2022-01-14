@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(['pomodoro.py'],
-             pathex=['C:\\development\\Python_100Days\\day28_pomodoro\\py_completed'],
+             pathex=['C:\\Development\\python\\Python_100Days\\day28_pomodoro\\py_completed'],
              binaries=[],
              datas=[],
              hiddenimports=[],
