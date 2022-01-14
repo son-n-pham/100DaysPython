@@ -1,22 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\day17_coffee_maker",
-    "\\day18_turtle",
-    "\\day19_20_snake_game",
-    "\\day27_tkinter_distance-converter",
-    "\\day27_tkinter_distance-converter\\py_completed",
     "\\day28_pomodoro",
     "\\day28_pomodoro\\exe",
-<<<<<<< HEAD
-    "\\day28_pomodoro\\py_completed"
-  ],
-  "SelectedNode": "\\day28_pomodoro\\py_completed",
-=======
     "\\day28_pomodoro\\py_completed",
-    "\\day28_pomodoro\\py_completed\\audio"
+    "\\day29_flash-card",
+    "\\day29_flash-card\\data",
+    "\\day29_flash-card\\images",
+    "\\day33_ISS-over-head-notifier",
+    "\\day33_Kanye-quote",
+    "\\env"
   ],
-  "SelectedNode": "\\day28_pomodoro\\py_completed\\setup.py",
->>>>>>> pomodoro
+  "SelectedNode": "\\env",
   "PreviewInSolutionExplorer": false
 }

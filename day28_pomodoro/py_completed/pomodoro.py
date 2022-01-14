@@ -39,6 +39,26 @@ class Pomodoro:
         # Enable pygame mixer for playing music
         mixer.init()
 
+        # ---------------------------- TIMER PAUSE  ------------------------------- # 
+        def PauseTimer():
+            # Turn off music if it is playing
+            mixer.music.stop()
+
+            if pauseBttn["text"]=="Pause":
+                # Stop window after
+                window.after_cancel(self.timer)
+                pauseBttn.config(text="Resume")
+            else:
+                # Stop window after
+                window.after_cancel(self.timer)
+                pauseBttn.config(text="Pause")
+                #CountDown(countDownTime)
+                self.timer = window.after(1000,CountDown, count-1)
+            
+            # Set states of buttons and entry boxes to appropriate states
+            startBttn["state"] = "disable"
+            resetBttn["state"] = "normal"
+
         # ---------------------------- TIMER RESET ------------------------------- # 
         def ResetTimer():
             # Turn off music if it is playing
@@ -58,6 +78,7 @@ class Pomodoro:
 
             # Set states of buttons and entry boxes to appropriate states
             startBttn["state"] = "normal"
+            pauseBttn["state"] = "disable"
             resetBttn["state"] = "disable"
             workPeriodEntry["state"] = "normal"
             shortBreakPeriodEntry["state"] = "normal"
@@ -105,11 +126,16 @@ class Pomodoro:
             shortBreakPeriodEntry["state"] = "disable"
             longBreakPeriodEntry["state"] = "disable"
 
+            # Enable Pause button
+            pauseBttn["state"] = "normal"
+
             # Call CountDown function with the set countDownTime
             CountDown(countDownTime)
 
         # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
-        def CountDown(count):
+        def CountDown(myCount):
+            global count
+            count = myCount
             minute = count//60
             if minute < 10:
                 minute = f"0{minute}"
@@ -138,10 +164,15 @@ class Pomodoro:
         tomato_img = PhotoImage(file=searchFile("tomato.png"))
         canvas.create_image(100,112,image=tomato_img)
         timerText = canvas.create_text(100, 130, text="00:00", fill="white",font=(FONT_NAME, 35, "bold"))
+        #canvas.config(pady=10)
         canvas.grid(row=1, column=1)
 
         startBttn = Button(text="Start", font=buttonFont, command=StartTimer)
         startBttn.grid(row=2, column=0)
+
+        pauseBttn = Button(text="Pause", command=PauseTimer)
+        pauseBttn.grid(row=2, column=1)
+        pauseBttn["state"] = "disable"        
 
         resetBttn = Button(text="Reset", font=buttonFont, command=ResetTimer)
         resetBttn.grid(row=2, column=2)
