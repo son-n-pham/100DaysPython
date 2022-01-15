@@ -53,6 +53,10 @@ say_goodbye()
 say_greeting()
 ```
 
+### Flask basic syntax with app.route
+<a href="https://github.com/son-n-pham/Python_100Days/blob/main/day54_first_website_with_flask/hello.py">Flask basic syntax</a>
+
+
 ## Day 55
 ### wrapper with paramaters
 
