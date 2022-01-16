@@ -127,5 +127,20 @@ Jinja is used to render the html template:
 
 ![image](https://user-images.githubusercontent.com/79841341/149656765-22b838f3-ee51-45cf-94bc-456b18c71af7.png)
 
+## Day 58: Review Bootstrap
+
+Grid in Bootstrap:
+- Screen width in bootstrap is equal to 12.
+- Example of the grid syntax with bootstrap. In the large screensize (lg), each column size is 3, thus there are 4 columns in a row. When the screensize is smaller (md), each column has the size of 4, thus there are 3 columns in a row. When the screensize is small (sm), each column has the size of 6, thus there are 2 columns in a row.
+
+```CSS
+<div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6" style="background-color:yellow; border:1px solid;">col-lg-3 col-md-4 col-sm-6</div>
+    <div class="col-lg-3 col-md-4 col-sm-6" style="background-color:yellow; border:1px solid;">col-lg-3 col-md-4 col-sm-6</div>
+    <div class="col-lg-3 col-md-4 col-sm-6" style="background-color:yellow; border:1px solid;">col-lg-3 col-md-4 col-sm-6</div>
+    <div class="col-lg-3 col-md-4 col-sm-6" style="background-color:yellow; border:1px solid;">col-lg-3 col-md-4 col-sm-6</div>
+</div>
+```
+
   
   
