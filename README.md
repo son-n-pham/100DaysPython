@@ -93,3 +93,6 @@ new_user2 = User("Hanh")
 new_user2.is_logged_in = True
 create_blog_post(new_user2)
 ```
+
+## Day 56
+Complete 2 projects which are my personal site and my name card
