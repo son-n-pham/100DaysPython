@@ -96,3 +96,22 @@ create_blog_post(new_user2)
 
 ## Day 56
 Complete 2 projects which are my personal site and my name card
+
+
+## Day 57
+Jinja is used to render the html template:
+- {{ }} is usually to insert Python code in html file
+- To run Python codes requiring imported libraries, it is better to run those codes in the python file, then send the results to html.
+  - In the python file, after the template file, we can add keyword and its value
+  
+    ![image](https://user-images.githubusercontent.com/79841341/149651930-0170d834-d909-4dd8-87eb-15a358da8cf9.png)
+  
+  - Then the html can use {{ }} with the keyword to access the value of that keyword.
+
+    ![image](https://user-images.githubusercontent.com/79841341/149652010-f037ab03-79ae-460b-a9a7-b70d915acb9c.png)
+
+  - And here is the result:
+
+    ![image](https://user-images.githubusercontent.com/79841341/149652033-7c1d460e-67cc-4bbd-a03d-b85382e2970d.png)
+
+
