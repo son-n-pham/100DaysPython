@@ -114,4 +114,18 @@ Jinja is used to render the html template:
 
     ![image](https://user-images.githubusercontent.com/79841341/149652033-7c1d460e-67cc-4bbd-a03d-b85382e2970d.png)
 
+- To run for loop or if condition in html file, below is an example to render even integers from 0 to 9
 
+  ```Python
+  {% for i in range(0,10): %}
+    {%if i%2==0: %}
+        <h1>{{ i }} </h1>
+    {% endif %}
+  {% endfor %}
+  ```
+- {{ url_for("python_function", \*\*kwargs) }} is used to redirect with paramaters from kwargs. Below is an example.
+
+![image](https://user-images.githubusercontent.com/79841341/149656765-22b838f3-ee51-45cf-94bc-456b18c71af7.png)
+
+  
+  
