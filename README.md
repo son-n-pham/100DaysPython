@@ -104,7 +104,7 @@ Jinja is used to render the html template:
 - To run Python codes requiring imported libraries, it is better to run those codes in the python file, then send the results to html.
   - In the python file, after the template file, we can add keyword and its value
   
-    ![image](https://user-images.githubusercontent.com/79841341/149651930-0170d834-d909-4dd8-87eb-15a358da8cf9.png)
+    ![image](https://user-images.githubusercontent.com/79841341/149652077-397466df-d83c-48ee-b013-4bdda1b0603d.png)
   
   - Then the html can use {{ }} with the keyword to access the value of that keyword.
 
