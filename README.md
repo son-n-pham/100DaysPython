@@ -142,5 +142,8 @@ Grid in Bootstrap:
 </div>
 ```
 
+Container:
+- container vs container-fluid:
+  - Both container and container-fluid make the block div responsive; container-fluid, however, make block to be full-width always.
   
   
