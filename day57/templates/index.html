@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+</head>
+<body>
+    <h1>This is my website</h1>
+    <p>This is to run the python code in html: 5 + 6 = {{ 5+6 }}</p>
+    <p>This is to access the random number generated in python file: {{ num }}</p>
+    <a href="{{ url_for('py_operation', num=11) }}">Go to Python operation</a>
+</body>
+<footer>
+    Copyright by Son Pham in year {{ this_year }}
+</footer>
+
+</html>

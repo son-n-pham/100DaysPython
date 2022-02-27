@@ -1,0 +1,91 @@
+h3{
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+#title{
+  background-color: #ccfffc;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.container-fluid{
+  padding: 3% 15%;
+}
+
+.title_sentense{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+/* Navigation bar */
+.navbar-brand{
+  font-family: 'Ubuntu';
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.navbar{
+  margin-bottom: 5rem;
+}
+
+.nav-item{
+  padding: 0 1rem;
+}
+
+.nav-link{
+  font-size: 1.2rem;
+}
+
+/* Download button */
+.download-btn{
+  margin: 5% 3% 5% 0;
+}
+
+/* Title image */
+.title-image{
+  width: 60%;
+  transform: rotate(25deg);
+}
+
+/* feature */
+.feature-box{
+  text-align: center;
+  padding: 5%;
+}
+
+#features{
+  padding: 7% 15%;
+}
+
+/* Testimonials Section */
+#testimonials{
+  padding: 7% 15%;
+  text-align: center;
+  background-color: #ccfffc;
+}
+
+.testimonials-image{
+  width: 10%;
+  border-radius: 100%
+}
+
+.carousel-item{
+  height: 500px;
+}
+
+/* Press Section */
+#press{
+  background-color: #ccfffc;
+  text-align: center;
+  padding-bottom: 3%
+}
+
+.press-logo{
+  width: 15%;
+  margin: 20px;
+}
