@@ -30,8 +30,11 @@ def greeting_1(name):
     return f"Hello {name}"
 
 
-#We can use path to include everything from that point as the variable.
-#When running 127.0.0.1:5000/Son/3, we get the result Additional Path: Hello Son/3
+# Variable rules: Optionally, we can use converter to specify the type of the argument <converter:variable_name>
+# string is the default, others are int, float, path and uuid
+# path like string but also accepts slashes
+# We can use path to include everything from that point as the variable.
+# When running 127.0.0.1:5000/Son/3, we get the result Additional Path: Hello Son/3
 @app.route("/<path:name>")
 def path_greeting(name):
     return f"Additional path: Hello {name}"
