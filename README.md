@@ -8,6 +8,20 @@ The repo will have sub-folder for each project. In each folder, there will be a 
 Hello world website can be created quickly from Flask website:
 https://flask.palletsprojects.com/en/2.0.x/quickstart/
 
+### Variable Rules
+
+<variable_name> can be used to bind the address's component into the view as function
+
+The below can pass user_name and order_id into view function orders. Enforcement of types of variables is optional, which order_id is forced to be integer type
+
+```python
+@app.route('/orders/<user_name>/<int:order_id>')
+def orders(user_name, order_id):
+    return f'<p>Fetching order #{order_id} for {user_name}.</p>'
+```
+
+
+
 ### Function decorator
 
 ```Python
