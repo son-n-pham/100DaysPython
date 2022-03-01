@@ -8,19 +8,6 @@ The repo will have sub-folder for each project. In each folder, there will be a 
 Hello world website can be created quickly from Flask website:
 https://flask.palletsprojects.com/en/2.0.x/quickstart/
 
-### Variable Rules
-
-<variable_name> can be used to bind the address's component into the view as function
-
-The below can pass user_name and order_id into view function orders. Enforcement of types of variables is optional, which order_id is forced to be integer type
-
-```python
-@app.route('/orders/<user_name>/<int:order_id>')
-def orders(user_name, order_id):
-    return f'<p>Fetching order #{order_id} for {user_name}.</p>'
-```
-
-
 
 ### Function decorator
 
@@ -128,6 +115,19 @@ Jinja is used to render the html template:
 
     ![image](https://user-images.githubusercontent.com/79841341/149652033-7c1d460e-67cc-4bbd-a03d-b85382e2970d.png)
 
+### Variable Rules
+
+<variable_name> can be used to bind the address's component into the view as function
+
+The below can pass user_name and order_id into view function orders. Enforcement of types of variables is optional, which order_id is forced to be integer type
+
+```python
+@app.route('/orders/<user_name>/<int:order_id>')
+def orders(user_name, order_id):
+    return f'<p>Fetching order #{order_id} for {user_name}.</p>'
+```
+
+### Loop
 - To run for loop or if condition in html file, below is an example to render even integers from 0 to 9
 
   ```Python
