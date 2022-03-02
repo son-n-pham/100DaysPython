@@ -127,6 +127,18 @@ def orders(user_name, order_id):
     return f'<p>Fetching order #{order_id} for {user_name}.</p>'
 ```
 
+### Variable Filters
+- Filters are used by the template engine to act on template variables
+- Syntax {{ variable | filter_name }}
+- Filter option:
+  - title: Capitalizes the first letter of each word in a string, known as titlecase
+  - capitalize: Capitalizes the first character of a string, such as in a sentence
+  - lower/uppercase: Makes all the characters in a string lowercase/uppercase
+  - int/float: Changes any number variable to an integer/float
+  - default: Defines a default string if the variable is not defined
+  - length: Calculates the length of a string, list or dictionary variable
+  - dictsort: Sorts a dictionary by its keys
+
 ### Loop
 - To run for loop or if condition in html file, below is an example to render even integers from 0 to 9
 
