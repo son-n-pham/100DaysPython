@@ -350,6 +350,30 @@ def my_route():
     return render_template("mytemplate", template_form=flask_form)
 ```
 
+### FlaskForm - Validator
+- We can run validation with the form everytime the form is submitted.
+- Validators come from wtform.validators, ie. from wtform.validators import DataRequired
+- Then DataRequired can be added into the class form
+
+```python
+my_textfield = StringField("TextLabel", validators=[DataRequired()])
+```
+
+- FlaskForm provides validate_on_submit() to ensure validation is completed before the form input is submitted.
+
+```python
+if my_form.validate_on_submit():
+    # Get form data
+```
+
+### Redirect
+
+This is to redirect to different route
+
+```python
+return redirect(url_for("new_route",new_var=this_var, \_external=True, \_scheme='https')
+```
+
 ## Day 58: Review Bootstrap
 
 Grid in Bootstrap:
