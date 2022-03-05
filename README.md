@@ -199,6 +199,10 @@ The inherited html file would have the content as below because it is inheriting
 ```
 
 ### Flask Forms
+- The object **request** is used to retrieve the input data of the form.
+- By the default, flask route only supports GET requests. To get data from the form, the flast route must have method=[\"GET\",\"POST\"]
+
+
 
 ## Day 58: Review Bootstrap
 
