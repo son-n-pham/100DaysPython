@@ -156,7 +156,9 @@ def orders(user_name, order_id):
     {% endif %}
   {% endfor %}
   ```
-- {{ url_for("python_function", \*\*kwargs) }} is used to redirect with paramaters from kwargs. Below is an example.
+
+### Route Selection
+{{ url_for("python_function", \*\*kwargs) }} is used to redirect with paramaters from kwargs. Below is an example.
 
 ![image](https://user-images.githubusercontent.com/79841341/149656765-22b838f3-ee51-45cf-94bc-456b18c71af7.png)
 
@@ -198,7 +200,7 @@ The inherited html file would have the content as below because it is inheriting
 </html>
 ```
 
-### Flask Forms
+### Flask Forms by Flask request object
 - The object **request** is used to retrieve the input data of the form.
 - By the default, flask route only supports GET requests. To get data from the form, the flast route must have method=[\"GET\",\"POST\"]
 
@@ -260,7 +262,93 @@ Here is the index, which inherits base.html
 {% endblock %}
 ```
 
+### Flask Forms by FlaskForm class
 
+We need to create our own Flask form inherit from FlaskForm
+
+```python
+from flask import Flask, render_template
+
+# This is for Flask forms by FlaskForm class
+from flask_wtf imoprt FlaskForm
+from wtforms import StringField, SubmitField
+
+app = Flask(__name__)
+
+# This is for protecting from CSRF (Cross Site Request Forgery)
+app.config["SECRET_KEY"] = "my_secret"
+
+class MyForm(FlaskForm):
+
+    # This is equal to <input type=text...
+    my_textfield = StringField("TextLabel")
+    
+    # This is equal to <input type=submit...
+    my_submit = SubmitField("SubmitName")
+
+# Then Flask route can use MyForm by creating its instance, and assign it in render_template
+
+@app.route("/", method=["GET", "POST"])
+def my_route():
+    flask_form = MyForm()
+    return render_template("mytemplate", template_form=flask_form)
+```
+
+In the template, the form can be written as below
+
+```html
+<form action="/" method="post">
+    
+    # This is for CSRF
+    {{ template_form.hidden_tag() }}
+    
+    # Render the label of my_textfield, which is "TextLabel"
+    {{ template_form.my_textfield.label }}
+    
+    # This is for inputting text
+    {{ template_form.my_textfield() }}
+    
+    # This is for clicking to submit
+    {{ template_form..my_submit() }}
+    
+</form>
+```
+
+Once the form is submitted, the input data is sent back to server. Python file can be rewritten as below to receive the input data.
+
+```python
+from flask import Flask, render_template
+
+# This is for Flask forms by FlaskForm class
+from flask_wtf imoprt FlaskForm
+from wtforms import StringField, SubmitField
+
+app = Flask(__name__)
+
+# This is for protecting from CSRF (Cross Site Request Forgery)
+app.config["SECRET_KEY"] = "my_secret"
+
+class MyForm(FlaskForm):
+
+    # This is equal to <input type=text...
+    my_textfield = StringField("TextLabel")
+    
+    # This is equal to <input type=submit...
+    my_submit = SubmitField("SubmitName")
+
+# Then Flask route can use MyForm by creating its instance, and assign it in render_template
+
+@app.route("/", method=["GET", "POST"])
+def my_route():
+    # Initiate the instance flask_form of MyForm class
+    flask_form = MyForm()
+    
+    # Input text from my_textfield is assigned to new_textfield variable
+    new_textfield = flask_form.my_textfield.data
+    
+    # Render mytemplate from templates folder with a flask variable template_form
+    return render_template("mytemplate", template_form=flask_form)
+```
 
 ## Day 58: Review Bootstrap
 
