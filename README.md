@@ -101,6 +101,13 @@ Complete 2 projects which are my personal site and my name card
 
 ## Day 57
 Jinja is used to render the html template:
+- render_template is used to call html file. The render_template looks for html file in templates folder. The below renders index.html and pass the template variable grocery_list to that index.html. That grocery_list is set to variable items in python file.
+
+```python
+return render_template("index.html", grocery_list=items)
+```
+
+
 - {{ }} is usually to insert Python code in html file
 - To run Python codes requiring imported libraries, it is better to run those codes in the python file, then send the results to html.
   - In the python file, after the template file, we can add keyword and its value
@@ -152,6 +159,46 @@ def orders(user_name, order_id):
 - {{ url_for("python_function", \*\*kwargs) }} is used to redirect with paramaters from kwargs. Below is an example.
 
 ![image](https://user-images.githubusercontent.com/79841341/149656765-22b838f3-ee51-45cf-94bc-456b18c71af7.png)
+
+### Inheritance
+- We can create a html file as the template, then create other html file using that template.
+- The template html file has the template layout/data/info. Inside it, there is a block of {%block content%}  {% endblock %}
+
+```html
+// This is the content of the template html file base.html
+<html>
+  <head>
+    <title>MY WEBSITE</title>
+  </head>
+  <body>
+  {% block content %}{% endblock %}
+  </body>
+</html>
+```
+
+- The other html files, which use that template, need to have 
+
+```html
+{% extends "base.html"  %} // Inherit the above html file named base.html
+ 
+{% block content %}
+    <p>This is my paragraph for this page.</p> // Its own contents is here
+{% endblock %}
+```
+
+The inherited html file would have the content as below because it is inheriting from the base.html.
+```html
+<html>
+  <head>
+    <title>MY WEBSITE</title>
+  </head>
+  <body>
+    <p>This is my paragraph for this page.</p>
+  </body>
+</html>
+```
+
+### Flask Forms
 
 ## Day 58: Review Bootstrap
 
