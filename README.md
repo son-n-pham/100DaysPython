@@ -202,6 +202,64 @@ The inherited html file would have the content as below because it is inheriting
 - The object **request** is used to retrieve the input data of the form.
 - By the default, flask route only supports GET requests. To get data from the form, the flast route must have method=[\"GET\",\"POST\"]
 
+This is from the app.py which render index.html. In which, flask.request is imported. request.form is used to retrieve data from a specific form based on the input's name of the form.
+
+```python
+from flask import Flask, render_template, request
+from helper import recipes, descriptions, ingredients, instructions, add_ingredients, add_instructions
+
+app = Flask(__name__)
+
+@app.route("/", methods=["GET", "POST"])
+def index():
+  new_id = len(recipes) + 1
+  if len(request.form) > 0:
+    #### Add the recipe name to recipes[new_id] 
+    recipes[new_id] = request.form["recipe"]
+    #### Add the recipe description to descriptions[new_id]
+    descriptions[new_id] = request.form["description"]
+    #### Add the values to new_ingredients and new_instructions
+    new_ingredients = request.form["ingredients"]
+    new_instructions = request.form["instructions"]
+    add_ingredients(new_id, new_ingredients)
+    add_instructions(new_id, new_instructions)
+  return render_template("index.html", template_recipes=recipes)
+```
+
+Here is the index, which inherits base.html
+
+```html
+{% extends "base.html" %}
+{% block content %}
+  <h1>Cooking By Myself</h1>
+  <p>Welcome to my cookbook. These are recipes I like.</p>
+  {% for id, name in template_recipes.items() %}
+    <p><a href="/recipe/{{ id }}">{{ name }}</a></p>
+  {% endfor %}
+
+  <form action="/" method="POST">
+    <h3>Add Recipe</h3>
+    <p>
+      <label for="recipe">Name:</label>
+      <input type="text" name="recipe"/>
+    </p>
+    <p>
+      <label for="description">Description:</label>
+      <textarea name="description"></textarea>
+    </p>
+    <p>
+      <label for="ingredients">Ingredients:</label>
+      <textarea name="ingredients"></textarea>
+    </p>
+    <p>
+      <label for="instructions">Instructions:</label>
+      <textarea name="instructions"></textarea>
+    </p>
+    <p><input type="submit" name="submit_recipe"/></p>
+  </form>
+{% endblock %}
+```
+
 
 
 ## Day 58: Review Bootstrap
