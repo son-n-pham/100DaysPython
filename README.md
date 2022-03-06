@@ -371,7 +371,7 @@ if my_form.validate_on_submit():
 This is to redirect to different route
 
 ```python
-return redirect(url_for("new_route",new_var=this_var, \_external=True, \_scheme='https')
+return redirect(url_for("new_route",new_var=this_var, _external=True, _scheme='https')
 ```
 
 ## Day 58: Review Bootstrap
