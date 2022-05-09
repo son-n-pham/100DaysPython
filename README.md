@@ -393,4 +393,24 @@ Container:
 - container vs container-fluid:
   - Both container and container-fluid make the block div responsive; container-fluid, however, make block to be full-width always.
   
-  
+
+## Set Environment Variable on Linux
+This is useful when our code needs username and password.
+
+Ref link:
+https://devconnected.com/how-to-set-and-unset-environment-variables-on-linux/
+
+Bash code:
+
+```bash
+# One line for .bashrc
+echo "export VAR="value"" >> ~/.bashrc && source ~/.bashrc
+
+
+# One line for bash_profile
+echo "export VAR="value"" >> ~/.bash_profile && source ~/.bash_profile
+
+
+# One line for /etc/environment
+echo "export VAR="value"" >> /etc/environment && source /etc/environment
+```
