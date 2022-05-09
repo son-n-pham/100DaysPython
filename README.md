@@ -414,3 +414,6 @@ echo "export VAR="value"" >> ~/.bash_profile && source ~/.bash_profile
 # One line for /etc/environment
 echo "export VAR="value"" >> /etc/environment && source /etc/environment
 ```
+
+### Formatting in VS Code with Jinja2
+Use django-html seems to resolve the issue with styling
