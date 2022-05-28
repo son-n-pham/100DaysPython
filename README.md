@@ -437,7 +437,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 # define table books
-class books(db.Model):
+class Book(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(250), unique=False, nullable=False)
     author = db.Column(db.String(250), unique=False, nullable=False)
@@ -450,7 +450,7 @@ class books(db.Model):
 db.create_all()
 
 # Add a record as an example
-db.session.add(books(title="Harry Porter",
+db.session.add(Book(title="Harry Porter",
                author="J.K. Rowling",
                rating=9.3))
 db.session.commit()
