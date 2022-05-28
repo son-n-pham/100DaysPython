@@ -133,6 +133,14 @@ The below can pass user_name and order_id into view function orders. Enforcement
 def orders(user_name, order_id):
     return f'<p>Fetching order #{order_id} for {user_name}.</p>'
 ```
+### request.args.get("<variable_name>")
+The below can catch the variables passed from html file by url_for
+
+```python
+from flask import request
+
+variable_value = request.args.get("variable_name")
+```
 
 ### Variable Filters
 - Filters are used by the template engine to act on template variables
