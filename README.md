@@ -523,3 +523,15 @@ db.session.commit()
 ```
 
 You can also delete by querying for a particular value e.g. by title or one of the other properties.
+
+## Authentication
+
+### Hashing
+
+Hash type:
+- 20,000,000,000 MD5 Hashes/Second
+- 17,000 bcrypt Hashes/Second
+
+### Salting:
+- Adding salt to make password more secured
+- We can also define how many row we salt our password (Salt Rounds)
